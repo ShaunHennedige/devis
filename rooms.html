@@ -17,7 +17,49 @@
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/daterangepicker.css">
     <link rel="stylesheet" href="assets/css/lightgallery.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">ß
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+
+    <style>
+      @media only screen and (max-width: 600px) {
+        h3 {
+          font-size: 18px; /* Adjust this value to your preference */
+        }
+      }
+
+      #whatsapp-icon {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        z-index: 1000;
+        background-color: #93531b; /* Blue background */
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+        color: #fff;
+        font-size: 30px;
+    }
+    
+    #whatsapp-icon:hover {
+        background-color: #93531b; /* Darker blue on hover */
+    }
+    
+    /* Mobile-specific styles */
+    @media only screen and (max-width: 600px) {
+        #whatsapp-icon {
+            bottom: 100px; /* Adjust position for mobile */
+            right: 10px;  /* Make it closer to the right edge */
+            width: 50px;  /* Smaller icon for mobile */
+            height: 50px;
+            font-size: 24px; /* Adjust font size for icon */
+        }
+    }
+    </style>
   </head>
   <body>
     <!-- Start Preloader -->
@@ -493,6 +535,10 @@
     </div>
   </footer>
   <!-- End Footer -->
+  <a href="https://wa.me/61412108801?text=Hello%2C%20I%20have%20a%20query%20about%20your%20services" 
+  id="whatsapp-icon" target="_blank" title="Contact us on WhatsApp">
+   <i class="fab fa-whatsapp"></i>
+   </a>
 
     <!-- Script -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -504,6 +550,16 @@
     <script src="assets/js/lightgallery.min.js"></script>
     <script src="assets/js/YTPlayer.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      function sendToWhatsApp() {
+          var phone = "961412108801";  // WhatsApp number
+          var message = "Hello, I have a query about your services.";
+          
+          var whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+      }
+      
+  </script>
   </body>
 
 </html>
